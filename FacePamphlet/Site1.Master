@@ -1,0 +1,53 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="FacePamphlet.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" type="text/css" href="scripts/FacePamphletStyleSheet.css" />
+    <style type="text/css">
+        .auto-style1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+       <table class="auto-style1" align="center">
+                <tr>
+                    <td colspan="3" style="text-align:center">
+                        <asp:Image ID="Header" runat="server" ImageUrl="~/Images/header.jpg" Width="457px" Height="248px"/>
+                    </td>
+
+                  
+                </tr>
+
+           <tr>
+                 <td class="auto-style1">
+                        <br />
+                        <br />
+                        <asp:Label ID="LabelHeader" runat="server" Text="A virtual social gathering place" Font-Bold="True" Font-Names="Arial" ForeColor="#CC9900"></asp:Label>
+                    </td>
+           </tr>
+                <tr>
+                   
+                    <td style="padding: 10px; padding-top: 20px">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                 
+                </tr>
+                <!--<tr>
+                    <td colspan="3" style="text-align:center; padding-top: 40px;">
+                        <asp:Image ID="Footer" runat="server" ImageUrl="~/Images/footer.png" Width="373px" Height="64px"/>
+                    </td>
+                </tr>-->
+            </table>
+    </div>
+    </form>
+</body>
+</html>
